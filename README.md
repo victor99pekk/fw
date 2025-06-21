@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # Transformer Blocks
 
 ## Overview
@@ -9,7 +7,7 @@ This project implements different components of the Transformer architecture fro
 1. [**Transformer Encoder with Classifier:**](#classifier) A Transformer encoder is trained jointly from scratch alongside a feedforward classifier to predict which politician delivered a given speech segment.
 2. [**GPT-like Transformer Decoder:**](#decoder-for-analyzation-of-perplexity) A word-level decoder is pretrained on an autoregressive language modeling task, reporting perplexity on different politicians' speeches.
 
-__Note:__ no libraries were used to create these (more or less, pytorch was used for example), Encoder/Decoder-library was used to import pre-made blocks for this project. The attention-mechanisms were all programmed.
+__Note:__ All transformer components—including multi-head attention mechanisms—were implemented from scratch using PyTorch for tensor operations; no high-level transformer libraries or pretrained models were employed. Only the Encoder/Decoder library was used to import basic architectural blocks.
 
 
 ## Classifier
@@ -63,42 +61,6 @@ __Head 2:__
 ![Attention Map Visualization](images/attention_map_2.png)
 
 
-## Getting Started
-### Prerequisites
-Ensure you have the following dependencies installed:
-- Python 3.x
-- PyTorch
-- NumPy
-- NLTK
-- Matplotlib (for visualization)
-
-You can install the required libraries using:
-```bash
-pip install torch numpy nltk matplotlib
-```
-
-
-### make
-
-```bash
-python main.py --part1
-```
-
-Expected accuracy: \~80% on test set.
-
-### Part 2: Transformer Decoder for Language Modeling
-
-Pretrain and evaluate the decoder:
-
-```bash
-python main.py --part2
-```
-
-Expected perplexity:
-
-- Training set: \~100s
-- Test sets: \~300-400s
-
 ## Evaluation and Reporting
 
 - **Attention Visualization**: Use `utilities.py` to validate attention matrices.
@@ -106,4 +68,4 @@ Expected perplexity:
   - Accuracy for classification (reported after each epoch up to 15 epochs).
   - Perplexity for language modeling (reported after every 100 iterations up to 500 iterations).
 - **Model Parameters**: Number of parameters for both encoder and decoder should be included in the report.
->>>>>>> aa37e92 (-)
+
